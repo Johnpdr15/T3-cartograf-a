@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <link rel="stylesheet" href="./resources/ol.css">
+  <link rel="stylesheet" href="resources/fontawesome-all.min.css">
+  <link rel="stylesheet" href="./resources/ol-layerswitcher.css">
+  <link rel="stylesheet" href="./resources/qgis2web.css">
+
+  <style>
+    html, body, #map {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+    }
+
+    .ol-control > * {
+      background-color: #f8f8f8!important;
+      color: #444!important;
+      border-radius: 0;
+    }
+
+    .ol-control > *:hover {
+      background-color: rgba(248, 248, 248, 0.7)!important;
+    }
+
+    .ol-control {
+      background-color: rgba(255,255,255,.4)!important;
+      padding: 2px!important;
+    }
+
+    /* LOGO INSTITUCIONAL UPN */
+    #logo-container {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      z-index: 9999;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 6px 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    #logo {
+      height: 50px;
+      width: auto;
+    }
+  </style>
+
+  <title>Mapa Web Ucayali</title>
+</head>
+<body>
+
+  <!-- Mapa -->
+  <div id="map">
+    <div id="popup" class="ol-popup">
+      <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+      <div id="popup-content"></div>
+    </div>
+  </div>
+
+  <!-- LOGO UPN -->
+  <div id="logo-container">
+    <a href="https://www.upn.edu.pe" target="_blank">
+      <img src="logo-upn.png" id="logo" alt="Logo UPN">
+    </a>
+  </div>
+
+  <!-- JS -->
+  <script src="resources/qgis2web_expressions.js"></script>
+  <script src="./resources/functions.js"></script>
+  <script src="./resources/ol.js"></script>
+  <script src="./resources/ol-layerswitcher.js"></script>
+
+  <!-- Capas -->
+  <script src="layers/Provincias_0.js"></script>
+  <script src="layers/Ucayali_1.js"></script>
+  <script src="layers/Centros_eductiv_2.js"></script>
+  <script src="layers/RDV_3.js"></script>
+  <script src="layers/RVV_4.js"></script>
+  <script src="layers/Rios_5.js"></script>
+
+  <!-- Estilos -->
+  <script src="styles/Provincias_0_style.js"></script>
+  <script src="styles/Ucayali_1_style.js"></script>
+  <script src="styles/Centros_eductiv_2_style.js"></script>
+  <script src="styles/RDV_3_style.js"></script>
+  <script src="styles/RVV_4_style.js"></script>
+  <script src="styles/Rios_5_style.js"></script>
+
+  <!-- Controlador -->
+  <script src="./layers/layers.js" type="text/javascript"></script> 
+  <script src="./resources/Autolinker.min.js"></script>
+  <script src="./resources/qgis2web.js"></script>
+
+</body>
+</html>
+
